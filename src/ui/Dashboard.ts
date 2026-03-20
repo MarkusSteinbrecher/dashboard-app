@@ -156,6 +156,21 @@ export class Dashboard {
     this.root.appendChild(header)
     this.root.appendChild(stats)
     this.root.appendChild(grid)
+
+    // Listen for selection changes from Share
+    this.bridge.onSelectionChange((globalId) => {
+      if (!this.selectionCard || !this.extraction) return
+      if (!globalId) {
+        this.selectionCard.showEmpty()
+        return
+      }
+      const record = this.extraction.globalIdToElement.get(globalId)
+      if (record) {
+        this.selectionCard.showElement(record)
+      } else {
+        this.selectionCard.showEmpty()
+      }
+    })
   }
 
   showLoading(message: string): void {

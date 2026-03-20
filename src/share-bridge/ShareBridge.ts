@@ -5,6 +5,7 @@ export class ShareBridge {
   private pendingRequests = new Map<string, (response: unknown) => void>()
   private connectionPromise: Promise<void>
   private resolveConnection!: () => void
+  private selectionCallback: ((globalId: string | null) => void) | null = null
 
   constructor() {
     this.connectionPromise = new Promise((resolve) => {
@@ -37,6 +38,10 @@ export class ShareBridge {
     return (result as ArrayBuffer) ?? null
   }
 
+  onSelectionChange(callback: (globalId: string | null) => void): void {
+    this.selectionCallback = callback
+  }
+
   async getSelectedElements(): Promise<number[]> {
     if (!this.port) return []
     const result = await this.request('getSelectedElements')
@@ -60,7 +65,16 @@ export class ShareBridge {
 
   private onMessage(event: MessageEvent): void {
     const msg = event.data as ShareMessage
-    if (msg?.action && this.pendingRequests.has(msg.action)) {
+    if (!msg?.action) return
+
+    // Handle push messages from Share
+    if (msg.action === 'selectionChanged') {
+      this.selectionCallback?.(msg.response as string | null)
+      return
+    }
+
+    // Handle request-response
+    if (this.pendingRequests.has(msg.action)) {
       const resolve = this.pendingRequests.get(msg.action)!
       this.pendingRequests.delete(msg.action)
       resolve(msg.response)
