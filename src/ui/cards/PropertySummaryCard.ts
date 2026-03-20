@@ -54,7 +54,7 @@ export function createPropertySummaryCard(kpis: KpiSet): ChartCard {
           title: {
             display: true,
             text: 'Fire Ratings',
-            color: '#a0a0a0',
+            color: '#666666',
             font: { size: 11 },
             align: 'start',
           },
@@ -62,11 +62,11 @@ export function createPropertySummaryCard(kpis: KpiSet): ChartCard {
         scales: {
           x: {
             grid: { display: false },
-            ticks: { color: '#e0e0e0' },
+            ticks: { color: '#FFFFFF' },
           },
           y: {
-            grid: { color: 'rgba(255,255,255,0.06)' },
-            ticks: { color: '#a0a0a0' },
+            grid: { color: 'rgba(255,255,255,0.04)' },
+            ticks: { color: '#666666' },
           },
         },
       },

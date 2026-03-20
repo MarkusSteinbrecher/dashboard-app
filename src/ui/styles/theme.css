@@ -1,31 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
 :root {
-  --bg-primary: #1e1e1e;
-  --bg-card: #2d2d2d;
-  --bg-card-hover: #333333;
-  --bg-input: #3a3a3a;
-  --text-primary: #e0e0e0;
-  --text-secondary: #a0a0a0;
-  --text-muted: #707070;
-  --accent: #4fc3f7;
-  --accent-hover: #81d4fa;
-  --border: #404040;
-  --error: #ef5350;
-  --success: #66bb6a;
-  --warning: #ffa726;
+  --bg-primary: #1A1A1A;
+  --bg-card: transparent;
+  --bg-card-hover: #212121;
+  --bg-input: #212121;
+  --text-primary: #FFFFFF;
+  --text-secondary: #999999;
+  --text-muted: #666666;
+  --accent: #FF6B35;
+  --accent-hover: #FF8555;
+  --accent-light: #2D1A0E;
+  --border: #3D3D3D;
+  --border-light: #2D2D2D;
+  --error: #FF4444;
+  --success: #00D4AA;
+  --warning: #FF6B35;
 
-  /* Chart palette — 8 distinct colors for dark backgrounds */
-  --chart-1: #4fc3f7;
-  --chart-2: #81c784;
-  --chart-3: #ffb74d;
-  --chart-4: #e57373;
-  --chart-5: #ba68c8;
-  --chart-6: #4db6ac;
-  --chart-7: #fff176;
-  --chart-8: #f06292;
+  /* Chart palette — HQ-aligned */
+  --chart-1: #FF6B35;
+  --chart-2: #00D4AA;
+  --chart-3: #5B8ED8;
+  --chart-4: #A78BFA;
+  --chart-5: #FBBF24;
+  --chart-6: #FF4444;
+  --chart-7: #FF8555;
+  --chart-8: #00B894;
 
-  --radius: 8px;
-  --radius-sm: 4px;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --radius: 0;
+  --radius-sm: 0;
+  --shadow: none;
+
+  --font-display: 'Oswald', 'Impact', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
 }
 
 body {

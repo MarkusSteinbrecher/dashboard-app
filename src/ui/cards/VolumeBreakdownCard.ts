@@ -3,8 +3,8 @@ import type { KpiSet } from '../../kpi/types'
 import { formatVolume } from '../../utils/formatting'
 
 const COLORS = [
-  '#4fc3f7', '#81c784', '#ffb74d', '#e57373',
-  '#ba68c8', '#4db6ac', '#fff176', '#f06292',
+  '#FF6B35', '#00D4AA', '#5B8ED8', '#A78BFA',
+  '#FBBF24', '#FF4444', '#FF8555', '#00B894',
 ]
 
 export function createVolumeBreakdownCard(
@@ -38,7 +38,7 @@ export function createVolumeBreakdownCard(
       plugins: {
         legend: {
           position: 'right',
-          labels: { color: '#e0e0e0', boxWidth: 12, padding: 8, font: { size: 11 } },
+          labels: { color: '#FFFFFF', boxWidth: 12, padding: 8, font: { size: 11 } },
         },
         tooltip: {
           callbacks: {

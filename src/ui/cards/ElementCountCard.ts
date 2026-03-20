@@ -2,8 +2,8 @@ import { ChartCard } from '../components/ChartCard'
 import type { KpiSet } from '../../kpi/types'
 
 const COLORS = [
-  '#4fc3f7', '#81c784', '#ffb74d', '#e57373',
-  '#ba68c8', '#4db6ac', '#fff176', '#f06292',
+  '#FF6B35', '#00D4AA', '#5B8ED8', '#A78BFA',
+  '#FBBF24', '#FF4444', '#FF8555', '#00B894',
 ]
 
 export function createElementCountCard(
@@ -45,12 +45,12 @@ export function createElementCountCard(
       },
       scales: {
         x: {
-          grid: { color: 'rgba(255,255,255,0.06)' },
-          ticks: { color: '#a0a0a0' },
+          grid: { color: 'rgba(255,255,255,0.04)' },
+          ticks: { color: '#666666' },
         },
         y: {
           grid: { display: false },
-          ticks: { color: '#e0e0e0' },
+          ticks: { color: '#FFFFFF' },
         },
       },
       onClick: (_event, elements) => {

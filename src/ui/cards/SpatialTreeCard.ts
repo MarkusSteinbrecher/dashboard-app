@@ -2,13 +2,13 @@ import { ChartCard } from '../components/ChartCard'
 import type { KpiSet } from '../../kpi/types'
 
 const TYPE_COLORS: Record<string, string> = {
-  Wall: '#4fc3f7',
-  Door: '#81c784',
-  Window: '#ffb74d',
-  Slab: '#e57373',
-  Beam: '#ba68c8',
-  Column: '#4db6ac',
-  Space: '#fff176',
+  Wall: '#FF6B35',
+  Door: '#00D4AA',
+  Window: '#5B8ED8',
+  Slab: '#A78BFA',
+  Beam: '#FBBF24',
+  Column: '#FF4444',
+  Space: '#FF8555',
 }
 
 export function createSpatialTreeCard(
@@ -50,19 +50,19 @@ export function createSpatialTreeCard(
       plugins: {
         legend: {
           position: 'top',
-          labels: { color: '#e0e0e0', boxWidth: 10, padding: 6, font: { size: 11 } },
+          labels: { color: '#FFFFFF', boxWidth: 10, padding: 6, font: { size: 11 } },
         },
       },
       scales: {
         x: {
           stacked: true,
           grid: { display: false },
-          ticks: { color: '#e0e0e0', maxRotation: 45 },
+          ticks: { color: '#FFFFFF', maxRotation: 45 },
         },
         y: {
           stacked: true,
-          grid: { color: 'rgba(255,255,255,0.06)' },
-          ticks: { color: '#a0a0a0' },
+          grid: { color: 'rgba(255,255,255,0.04)' },
+          ticks: { color: '#666666' },
         },
       },
       onClick: (_event, elements) => {
