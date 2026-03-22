@@ -1,6 +1,6 @@
 .chart-card {
   background: var(--bg-card);
-  border-radius: 0;
+  border-radius: var(--radius);
   border: 1px solid var(--border-light);
   overflow: hidden;
   transition: border-color 0.15s;
@@ -14,54 +14,50 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 8px 12px;
   border-bottom: 1px solid var(--border-light);
 }
 
 .chart-card-title {
-  font-family: var(--font-display);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
+  font-size: 12px;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
 .chart-card-subtitle {
-  font-size: 0.6875rem;
+  font-size: 10px;
   color: var(--text-muted);
-  font-family: var(--font-mono);
 }
 
 .chart-card-body {
-  padding: 1rem;
+  padding: 12px;
   position: relative;
 }
 
 .chart-card-body canvas {
   width: 100% !important;
-  max-height: 240px;
+  max-height: 200px;
 }
 
 .chart-card-empty {
-  padding: 1.5rem 1rem;
+  padding: 16px 12px;
   text-align: center;
   color: var(--text-muted);
-  font-size: 0.8125rem;
+  font-size: 12px;
 }
 
-/* Property summary cards */
 .prop-summary-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .prop-summary-item {
   text-align: center;
-  padding: 0.75rem 0.5rem;
+  padding: 8px 4px;
   border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
   transition: border-color 0.15s;
 }
 
@@ -70,17 +66,16 @@
 }
 
 .prop-summary-item .value {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   color: var(--accent);
   line-height: 1;
 }
 
 .prop-summary-item .label {
-  font-size: 0.6875rem;
+  font-size: 10px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  margin-top: 0.25rem;
+  margin-top: 2px;
 }

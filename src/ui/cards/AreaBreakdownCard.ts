@@ -3,8 +3,8 @@ import type { KpiSet } from '../../kpi/types'
 import { formatArea } from '../../utils/formatting'
 
 const COLORS = [
-  '#FF6B35', '#00D4AA', '#5B8ED8', '#A78BFA',
-  '#FBBF24', '#FF4444', '#FF8555', '#00B894',
+  '#90CAF9', '#80CBC4', '#CE93D8', '#FFB74D',
+  '#A5D6A7', '#EF9A9A', '#B0BEC5', '#FFF176',
 ]
 
 export function createAreaBreakdownCard(
@@ -47,11 +47,11 @@ export function createAreaBreakdownCard(
       scales: {
         x: {
           grid: { display: false },
-          ticks: { color: '#FFFFFF', maxRotation: 45 },
+          ticks: { color: 'rgba(255,255,255,0.7)', maxRotation: 45 },
         },
         y: {
           grid: { color: 'rgba(255,255,255,0.04)' },
-          ticks: { color: '#666666' },
+          ticks: { color: 'rgba(255,255,255,0.3)' },
         },
       },
       onClick: (_event, elements) => {
